@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Phone, Mail, MapPin, Send, MessageSquare } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
 
 const ContactPage = () => {
   useEffect(() => {
@@ -26,17 +28,38 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError(null);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1500);
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setError(null);
+
+  const currentTime = new Date().toLocaleString('pt-BR', {
+    dateStyle: 'short',
+    timeStyle: 'short',
+  });
+
+  const dataToSend = {
+    ...formData,
+    time: currentTime,
   };
+
+  emailjs.send(
+    'service_r8jm5ei', 
+    'template_cbjba29',
+    dataToSend,
+    'E0kn5wOiYWV1LzfhR' 
+  )
+  .then(() => {
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  })
+  .catch((error) => {
+    console.error('Erro ao enviar:', error);
+    setIsSubmitting(false);
+    setError('Erro ao enviar a mensagem. Tente novamente mais tarde.');
+  });
+};
+
 
   return (
     <div>
@@ -72,10 +95,10 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-bold text-lg mb-1">Telefone</h3>
                     <p className="text-slate-600 dark:text-slate-400">
-                      (61) 99678-6027
+                      (11) 99999-9999
                     </p>
                     <p className="text-slate-600 dark:text-slate-400">
-                      Segunda: 12h às 20h / Terça-Sábado: 09h ás 20h
+                      Segunda a Domingo: 9h às 20h
                     </p>
                   </div>
                 </div>
@@ -87,9 +110,11 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-bold text-lg mb-1">E-mail</h3>
                     <p className="text-slate-600 dark:text-slate-400">
-                      bigmanbarbershopp@outlook.com
+                      contato@bigman.com.br
                     </p>
-                    
+                    <p className="text-slate-600 dark:text-slate-400">
+                      comercial@bigman.com.br
+                    </p>
                   </div>
                 </div>
 
@@ -100,11 +125,11 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-bold text-lg mb-1">Unidade Principal</h3>
                     <p className="text-slate-600 dark:text-slate-400">
-                      QR 117 Conjunto A , 03 - 72547401 Santa Maria - Brasília / DF
+                      Av. Principal, 123, Centro, São Paulo - SP
                     </p>
                     <a 
-                      href="https://www.google.com/maps/place/BIG+MAN+Barber+Shopp/@-16.0038467,-47.9937538,17z"  
-                      target="_blank"  
+                      href="https://www.google.com/maps" 
+                      target="_blank" 
                       rel="noopener noreferrer"
                       className="text-accent hover:underline mt-1 inline-block"
                     >
@@ -121,7 +146,7 @@ const ContactPage = () => {
                     <h3 className="font-bold text-lg mb-1">Redes Sociais</h3>
                     <div className="flex space-x-4 mt-2">
                       <a 
-                        href="https://www.instagram.com/bigmanbarbershopp/?igsh=M" 
+                        href="https://instagram.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-slate-600 dark:text-slate-400 hover:text-accent"
@@ -129,14 +154,21 @@ const ContactPage = () => {
                         Instagram
                       </a>
                       <a 
-                        href="https://www.facebook.com/profile.php?id=1000640531" 
+                        href="https://facebook.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-slate-600 dark:text-slate-400 hover:text-accent"
                       >
                         Facebook
                       </a>
-                      
+                      <a 
+                        href="https://twitter.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-slate-600 dark:text-slate-400 hover:text-accent"
+                      >
+                        Twitter
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -306,7 +338,13 @@ const ContactPage = () => {
               </p>
             </div>
 
-            
+            <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6">
+              <h3 className="font-bold text-lg mb-2">Como funcionam os sorteios e rifas?</h3>
+              <p className="text-slate-600 dark:text-slate-400">
+                Nossos sorteios são realizados regularmente, com prêmios exclusivos. Você pode comprar os números pela nossa plataforma online ou diretamente em nossas unidades. Os sorteios são transmitidos ao vivo em nossas redes sociais.
+              </p>
+            </div>
+
             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6">
               <h3 className="font-bold text-lg mb-2">Vocês atendem crianças?</h3>
               <p className="text-slate-600 dark:text-slate-400">

@@ -6,19 +6,19 @@ const serviceItems = [
     icon: Scissors,
     title: 'Corte de Cabelo',
     description: 'Cortes modernos e clássicos realizados por profissionais experientes.',
-    price: 'A partir de R$ 50,00',
+    price: 'A partir de R$ 45,00',
   },
   {
     icon: Beard,
     title: 'Barba',
     description: 'Modelagem, hidratação e finalização para uma barba impecável.',
-    price: 'A partir de R$ 35,00',
+    price: 'A partir de R$ 15,00',
   },
   {
     icon: Sparkles,
-    title: 'Tratamentos',
+    title: 'Procedimenos',
     description: 'Hidratação, nutrição e outros cuidados para cabelo e barba.',
-    price: 'A partir de R$ 70,00',
+    price: 'A partir de R$ 40,00',
   },
 ];
 

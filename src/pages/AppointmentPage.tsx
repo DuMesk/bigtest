@@ -1,3 +1,4 @@
+import { supabase } from '../lib/supabase';
 import { useEffect, useState } from 'react';
 import { Calendar, Clock, User, ChevronLeft, ChevronRight, Check, Scissors, MapPin } from 'lucide-react';
 import { format } from 'date-fns';

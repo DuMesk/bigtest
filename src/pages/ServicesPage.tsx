@@ -8,25 +8,25 @@ const serviceCategories = [
     icon: Scissors,  
     services: [
       {
-        name: 'Corte Clássico',
-        price: 'R$ 50,00',
+        name: 'Corte de cabelo ',
+        price: 'R$ 45,00',
        
         description: 'Corte tradicional com tesoura e máquina, finalizado com produtos de alta qualidade.',
-        image: 'https://images.pexels.com/photos/1319461/pexels-photo-1319461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-      },
-      {
-        name: 'Corte Degradê',
-        price: 'R$ 60,00',
-        time: '45 min',
-        description: 'Degradê personalizado com máquina e navalha, adequado ao formato do seu rosto.',
         image: 'https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
       },
       {
-        name: 'Corte + Desenho',
-        price: 'R$ 75,00',
-        time: '60 min',
-        description: 'Corte com desenho personalizado na lateral ou nuca, feito com navalha por especialistas.',
-        image: 'https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        name: 'Corte Degradê',
+        price: 'R$ 35,00',
+        
+        description: 'Degradê personalizado com máquina e navalha, adequado ao formato do seu rosto.',
+        image: 'https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+      },
+      {
+        name: 'Corte só máquina',
+        price: 'R$ 18,00',
+        
+        description: 'Corte na máquina, rápido e na regua !',
+        image: 'https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' 
       },
     ]
   },
@@ -35,82 +35,57 @@ const serviceCategories = [
     icon: Beard,
     services: [
       {
-        name: 'Aparar Barba',
-        price: 'R$ 35,00',
-        time: '30 min',
-        description: 'Modelagem da barba com máquina e tesoura para manter o formato desejado.',
-        image: 'https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        name: 'Barba express "toda na máquina"',
+        price: 'R$ 15,00',
+        
+        description: 'Modelagem da barba com máquina para manter o formato desejado.',
+        image: 'https://images.pexels.com/photos/2881253/pexels-photo-2881253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'  
       },
       {
-        name: 'Barba Completa',
-        price: 'R$ 45,00',
-        time: '40 min',
-        description: 'Serviço completo de barba com toalha quente, produtos especiais e finalização.',
+        name: 'Barba',
+        price: 'R$ 25,00',
+        
+        description: 'Serviço completo de barba com produtos especiais e finalização.',
         image: 'https://images.pexels.com/photos/1319461/pexels-photo-1319461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
       },
-      {
-        name: 'Barba + Pigmentação',
-        price: 'R$ 70,00',
-        time: '50 min',
-        description: 'Serviço de barba completo com aplicação de pigmento para disfarçar falhas.',
-        image: 'https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+       {
+        name: 'Pigmentação barba',
+        price: 'R$ 25,00',
+        
+        description: 'Realce a aparência da sua barba com nossa pigmentação profissional! Corrija falhas, defina os contornos e conquiste um visual mais cheio',
+        image: 'https://images.pexels.com/photos/995300/pexels-photo-995300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
       },
+      
     ]
   },
   {
-    title: 'Tratamentos',
+    title: 'Procedimentos',
     icon: Sparkles,
     services: [
       {
-        name: 'Hidratação Capilar',
-        price: 'R$ 70,00',
-        time: '40 min',
-        description: 'Hidratação profunda com produtos premium para recuperar a saúde dos fios.',
-        image: 'https://images.pexels.com/photos/3998429/pexels-photo-3998429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        name: 'Luzes',
+        price: 'R$ 110,00',
+        
+        description: 'Ilumine seu visual com nosso serviço de luzes! Técnica perfeita para dar mais vida, contraste e estilo ao seu cabelo, realçando seu corte com personalidade e modernidades.',
+        image: 'https://images.pexels.com/photos/6007503/pexels-photo-6007503.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' 
       },
       {
-        name: 'Tratamento Anti-Queda',
-        price: 'R$ 90,00',
-        time: '50 min',
+        name: 'Progressiva',
+        price: 'R$ 40,00',
+        
         description: 'Aplicação de produtos específicos para fortalecer os fios e reduzir a queda.',
-        image: 'https://images.pexels.com/photos/3993445/pexels-photo-3993445.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        image: 'https://images.pexels.com/photos/2068672/pexels-photo-2068672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
       },
       {
-        name: 'Hidratação de Barba',
-        price: 'R$ 50,00',
-        time: '30 min',
-        description: 'Tratamento para deixar a barba macia, hidratada e com aspecto saudável.',
-        image: 'https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        name: 'Platinado',
+        price: 'R$ 110,00',
+        
+        description: 'O platinado perfeito para quem gosta de ousar! Deixe seu visual marcante com fios claros, estilo moderno e cheio de atitude',
+        image: 'https://images.pexels.com/photos/7518729/pexels-photo-7518729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
       },
     ]
   },
-  {
-    title: 'Pacotes',
-    icon: Droplet,
-    services: [
-      {
-        name: 'Combo Clássico',
-        price: 'R$ 75,00',
-        time: '60 min',
-        description: 'Corte de cabelo + aparar barba, ideal para manutenção regular.',
-        image: 'https://images.pexels.com/photos/1453005/pexels-photo-1453005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-      },
-      {
-        name: 'Combo Premium',
-        price: 'R$ 130,00',
-        time: '90 min',
-        description: 'Corte, barba completa e hidratação facial para uma experiência completa.',
-        image: 'https://images.pexels.com/photos/897265/pexels-photo-897265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-      },
-      {
-        name: 'Combo Pai e Filho',
-        price: 'R$ 100,00',
-        time: '80 min',
-        description: 'Corte para pai e filho, uma experiência especial para compartilhar.',
-        image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-      },
-    ]
-  }, 
+  
 ];
 
 const ServicesPage = () => {

@@ -7,7 +7,7 @@ import Locations from '../components/home/Locations';
 
 const HomePage = () => {
   useEffect(() => {
-    document.title = 'BIG MAN Barber Shopp | Home';
+    document.title = 'BIG MAN Barber Shopping | Home';
   }, []);
 
   return (
